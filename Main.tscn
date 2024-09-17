@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvrgep88ufp8y"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_jyscs"]
+[ext_resource type="FontFile" uid="uid://bw854qpvobb71" path="res://ticking-timebomb-bb-font/TickingTimebombBb-RB0l.ttf" id="2_oskn6"]
+[ext_resource type="Texture2D" uid="uid://papnxc2rd8as" path="res://MinuteHand.svg" id="3_4fqop"]
+[ext_resource type="Texture2D" uid="uid://th373s6ml4p1" path="res://HourHand.svg" id="4_w228v"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jyscs")
+metadata/_edit_horizontal_guides_ = [580.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 3200.0
+offset_bottom = 1440.0
+color = Color(0, 0, 0, 1)
+
+[node name="Second" type="Label" parent="."]
+offset_left = 1900.0
+offset_top = 100.0
+offset_right = 2500.0
+offset_bottom = 750.0
+theme_override_fonts/font = ExtResource("2_oskn6")
+theme_override_font_sizes/font_size = 600
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Minute" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1300.0
+offset_top = 100.0
+offset_right = 1900.0
+offset_bottom = 750.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_oskn6")
+theme_override_font_sizes/font_size = 617
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hour" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 100.0
+offset_right = 1300.0
+offset_bottom = 750.0
+theme_override_fonts/font = ExtResource("2_oskn6")
+theme_override_font_sizes/font_size = 600
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1600, 1010)
+scale = Vector2(0.05, 0.05)
+
+[node name="MinuteHand" type="Sprite2D" parent="."]
+position = Vector2(1600, 1010)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_4fqop")
+
+[node name="HourHand" type="Sprite2D" parent="."]
+position = Vector2(1600, 1010)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_w228v")
